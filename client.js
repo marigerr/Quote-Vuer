@@ -18,6 +18,6 @@ var samplequote = {
     "_id": {
         "$oid": "5a1ea59b16db4f1a7da7e053"
     },
-    "quoteText": "Self-complacency is fatal to progress.",
-    "quoteAuthor": "Margaret Sangster"
+    "quote": "Self-complacency is fatal to progress.",
+    "author": "Margaret Sangster"
 }
