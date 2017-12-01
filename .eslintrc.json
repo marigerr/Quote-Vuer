@@ -3,7 +3,8 @@
         "browser": true,
         "commonjs": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "mocha": true
     },
     "parserOptions": {
         "ecmaFeatures": {
@@ -12,6 +13,7 @@
         "sourceType": "module"
     },
     "rules": {
+        "indent": ["error", 2],
         "no-const-assign": "warn",
         "no-this-before-super": "warn",
         "no-undef": "warn",
