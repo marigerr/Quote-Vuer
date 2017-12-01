@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/marigerr/random-quote-api.svg?branch=master)](https://travis-ci.org/marigerr/random-quote-api)
+
 **Random Quote Generator**
 
 Api address : https://long-bongo.glitch.me/api.quotes/random
