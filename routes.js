@@ -18,6 +18,17 @@ router.route("/api.quotes/random")
     });
   });
 
+router.route("/api.quotes/authors")
+  .get((req, res) => {
+    Quote.find().distinct('author', (err, data) => {
+      if (err) console.log(err);
+      else {
+        console.log(data.length);
+        res.json(data);
+      }
+    });
+  });
+
 // Root address of app will display index.html with api information
 router.route("/")
   .get((req, res) => {

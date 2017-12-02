@@ -1,0 +1,2 @@
+- create page to search quotes - similar to codepen version with wikipedia link
+- add api for getting quotes by author
