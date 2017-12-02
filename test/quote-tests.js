@@ -11,7 +11,7 @@ const should = require('chai').should();
 
 chai.use(chaiHttp);
 
-describe('/GET quote', () => {
+describe('/GET random quote', () => {
   it('it should GET a random quote', (done) => {
     chai.request(server)
       .get('/api.quotes/random')
@@ -20,6 +20,19 @@ describe('/GET quote', () => {
         res.should.have.status(200);
         res.body.should.be.a('object');
         res.body.should.have.property('quote');
+        done();
+      });
+  });
+});
+
+describe('/GET authors', () => {
+  it('it should GET list of quote authors', (done) => {
+    chai.request(server)
+      .get('/api.quotes/authors')
+      .end((err, res) => {
+        should.not.exist(err);
+        res.should.have.status(200);
+        res.body.should.be.an('array');
         done();
       });
   });

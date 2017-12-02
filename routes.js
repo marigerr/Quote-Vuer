@@ -23,7 +23,11 @@ router.route("/api.quotes/authors")
     Quote.find().distinct('author', (err, data) => {
       if (err) console.log(err);
       else {
-        console.log(data.length);
+        data.sort();
+        // sort by last name need to fix
+        // data.sort((author1, author2) => {
+        // return author1.split(' ').slice(-1)[0] > author2.split(' ').slice(-1)[0];
+        // });
         res.json(data);
       }
     });
@@ -32,7 +36,6 @@ router.route("/api.quotes/authors")
 // Root address of app will display index.html with api information
 router.route("/")
   .get((req, res) => {
-    console.log('hi');
     res.sendFile(__dirname + '/views/index.html');
   });
 
