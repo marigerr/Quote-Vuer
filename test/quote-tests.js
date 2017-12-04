@@ -33,6 +33,25 @@ describe('/GET authors', () => {
         should.not.exist(err);
         res.should.have.status(200);
         res.body.should.be.an('array');
+        res.body.should.have.lengthOf.above(1);
+        done();
+      });
+  });
+});
+
+describe('/GET authors that start with ?', () => {
+  it('it should GET list of quote authors that begin with letter parameter', (done) => {
+    const startswithletter = 'a';
+    chai.request(server)
+      .get('/api.quotes/author-starts-with?startswith=' + startswithletter)
+      .end((err, res) => {
+        should.not.exist(err);
+        res.should.have.status(200);
+        res.body.should.be.an('array');
+        res.body.should.have.lengthOf.above(1);
+        res.body.forEach(element => {
+          element.charAt(0).toLowerCase().should.equal(startswithletter);  
+        });
         done();
       });
   });

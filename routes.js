@@ -18,6 +18,7 @@ router.route("/api.quotes/random")
     });
   });
 
+// list of all authors
 router.route("/api.quotes/authors")
   .get((req, res) => {
     Quote.find().distinct('author', (err, data) => {
@@ -29,6 +30,21 @@ router.route("/api.quotes/authors")
         // return author1.split(' ').slice(-1)[0] > author2.split(' ').slice(-1)[0];
         // });
         res.json(data);
+      }
+    });
+  });
+
+// list of all authors that start with parameter
+router.route("/api.quotes/author-starts-with")
+  .get((req, res) => {
+    Quote.find({ author: { $regex: "^" + req.query.startswith, $options: 'i'  } }, { author: true, _id: false }).exec((err, data) => {
+      if (err) console.log(err);
+      else {
+        const flatarray = data.map(x => x.author);
+        const uniqueArray = flatarray.filter(function (item, pos) {
+          return flatarray.indexOf(item) == pos;
+        })
+        res.json(uniqueArray);
       }
     });
   });
