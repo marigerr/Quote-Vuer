@@ -34,10 +34,21 @@ router.route("/api.quotes/authors")
     });
   });
 
-// list of all authors that start with parameter
+// array of all quotes by author search
+router.route("/api.quotes/author")
+  .get((req, res) => {
+    Quote.find({ author: req.query.author }).exec((err, data) => {
+      if (err) console.log(err);
+      else {
+        res.json(data);
+      }
+    });
+  });
+
+// list of all authors that start with string parameter
 router.route("/api.quotes/author-starts-with")
   .get((req, res) => {
-    Quote.find({ author: { $regex: "^" + req.query.startswith, $options: 'i'  } }, { author: true, _id: false }).exec((err, data) => {
+    Quote.find({ author: { $regex: "^" + req.query.startswith, $options: 'i' } }, { author: true, _id: false }).exec((err, data) => {
       if (err) console.log(err);
       else {
         const flatarray = data.map(x => x.author);

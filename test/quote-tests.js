@@ -56,3 +56,21 @@ describe('/GET authors that start with ?', () => {
       });
   });
 });
+
+describe('/GET quotes by author parameter', () => {
+  it('it should GET list of quotes by given author', (done) => {
+    const author = 'Abraham Lincoln';
+    chai.request(server)
+      .get('/api.quotes/author?author=' + author)
+      .end((err, res) => {
+        should.not.exist(err);
+        res.should.have.status(200);
+        res.body.should.be.an('array');
+        res.body.should.have.lengthOf.above(1);
+        res.body.forEach(element => {
+          element.author.should.equal(author);  
+        });
+        done();
+      });
+  });
+});
