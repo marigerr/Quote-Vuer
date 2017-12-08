@@ -1,3 +1,4 @@
+- try out swagger for documentation of api
 - get better database from using https://github.com/Arelius/QuoteDB
 
 Done
