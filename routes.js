@@ -55,6 +55,7 @@ router.route("/api.quotes/author-starts-with")
         const uniqueArray = flatarray.filter(function (item, pos) {
           return flatarray.indexOf(item) == pos;
         })
+        uniqueArray.sort();
         res.json(uniqueArray);
       }
     });

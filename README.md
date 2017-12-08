@@ -2,7 +2,7 @@
 
 **Random Quote Generator**
 
-Api address : https://long-bongo.glitch.me/api.quotes/random
+Api address : https://mighty-poet.glitch.me/api.quotes/random
 
 Method : GET
 

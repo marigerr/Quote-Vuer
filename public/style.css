@@ -22,7 +22,12 @@ button {
 }
 
 pre{
-    white-space: pre-wrap;
+  white-space: pre-wrap;
+}
+
+.api-address {
+  text-decoration: none;
+  color: black;
 }
 
 /* You might want to try something fancier: */
