@@ -7,10 +7,10 @@ const Quote = require('./models/quote.js');
 router.route("/api.quotes/random")
   .get((req, res) => {
     Quote.aggregate({ $sample: { size: 1 } },
-      (err, quote) => {
+      (err, quotes) => {
         if (err) console.log(err);
         else {
-          res.json(quote);
+          res.json(quotes[0]);
         }
       }
     );
