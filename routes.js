@@ -6,16 +6,14 @@ const Quote = require('./models/quote.js');
 // random quote api route
 router.route("/api.quotes/random")
   .get((req, res) => {
-    Quote.count().exec(function (err, count) {
-      const random = Math.floor(Math.random() * count);
-      Quote.findOne().skip(random).exec(
-        (err, quote) => {
-          if (err) console.log(err);
-          else {
-            res.json(quote);
-          }
-        });
-    });
+    Quote.aggregate({ $sample: { size: 1 } },
+      (err, quote) => {
+        if (err) console.log(err);
+        else {
+          res.json(quote);
+        }
+      }
+    );
   });
 
 // list of all authors
@@ -24,8 +22,7 @@ router.route("/api.quotes/authors")
     Quote.find().distinct('author', (err, data) => {
       if (err) console.log(err);
       else {
-        data.sort();
-        // sort by last name need to fix
+        // TODO : sort by last name 
         // data.sort((author1, author2) => {
         // return author1.split(' ').slice(-1)[0] > author2.split(' ').slice(-1)[0];
         // });
@@ -54,8 +51,7 @@ router.route("/api.quotes/author-starts-with")
         const flatarray = data.map(x => x.author);
         const uniqueArray = flatarray.filter(function (item, pos) {
           return flatarray.indexOf(item) == pos;
-        })
-        uniqueArray.sort();
+        });
         res.json(uniqueArray);
       }
     });
