@@ -4,6 +4,12 @@ const Quote = require('./models/quote.js');
 // const path = require('path');
 
 // random quote api route
+router.route("/api.quotes/ping")
+  .get((req, res) => {
+    res.json('pong');
+  });
+
+// random quote api route
 router.route("/api.quotes/random")
   .get((req, res) => {
     Quote.aggregate({ $sample: { size: 1 } },
