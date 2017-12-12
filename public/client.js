@@ -15,9 +15,7 @@ $(function() {
 
 
 var samplequote = {
-    "_id": {
-        "$oid": "5a1ea59b16db4f1a7da7e053"
-    },
-    "quote": "Self-complacency is fatal to progress.",
-    "author": "Margaret Sangster"
-}
+  "_id": "5a1ea59b16db4f1a7da7e053",
+  "quote": "Self-complacency is fatal to progress.",
+  "author": "Margaret Sangster"
+};
