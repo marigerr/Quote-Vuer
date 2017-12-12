@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/marigerr/random-quote-api.svg?branch=master)](https://travis-ci.org/marigerr/random-quote-api)
+[![Build Status](https://travis-ci.org/marigerr/quote-api.svg?branch=master)](https://travis-ci.org/marigerr/quote-api)
 
 **Quotes API**
 
