@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "babel-node": "babel-node --presets=env",
     "start-with-babel": "nodemon --exec npm run babel-node -- ./server.js",
     "build-with-babel": "babel src -d dist",    
