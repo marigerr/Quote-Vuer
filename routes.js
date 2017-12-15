@@ -1,7 +1,6 @@
 const express = require('express');
 const router = new express.Router();
 const Quote = require('./models/quote.js');
-// const path = require('path');
 
 // random quote api route
 router.route("/api.quotes/ping")
@@ -55,7 +54,7 @@ router.route("/api.quotes/author-starts-with")
       if (err) console.log(err);
       else {
         const flatarray = data.map(x => x.author);
-        const uniqueArray = flatarray.filter(function (item, pos) {
+        const uniqueArray = flatarray.filter((item, pos) => {
           return flatarray.indexOf(item) == pos;
         });
         res.json(uniqueArray);

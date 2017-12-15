@@ -4,6 +4,8 @@ const routes = require('./routes');
 const cors = require('cors');
 const app = express();
 const mongoose = require('mongoose');
+const graphqlHTTP = require('express-graphql');
+const { graphqlSchema } = require('./graphql/Schema.js');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.DATABASE, {
@@ -20,6 +22,11 @@ app.use(cors());
 app.use(express.static('public'));
 
 /**** Routes ****/
+app.use('/graphql', graphqlHTTP ({
+  schema: graphqlSchema,
+  graphiql:true
+}));
+
 app.use('/', routes);
 
 // start the server
