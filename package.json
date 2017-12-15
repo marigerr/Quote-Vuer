@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",  
+    "babel-node": "babel-node --presets=env",
+    "start-with-babel": "nodemon --exec npm run babel-node -- ./server.js",
+    "build-with-babel": "babel src -d dist",    
     "test": "mocha --timeout 10000 --exit"
   },
   "dependencies": {
@@ -28,6 +30,8 @@
     "express"
   ],
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
     "chai-http": "^3.0.0",
     "mocha": "^4.0.1"
