@@ -1,0 +1,67 @@
+a:link, a:visited  {
+  color: white;
+}
+
+a:hover {
+  color: lightslategray;
+}
+
+#random-quote-and-button {
+  height: 100%;
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#random-quote-and-author {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  flex-basis: 80%;
+}
+
+#random-quote-btn-wrapper {
+  flex-basis: 10%;
+}
+
+#random-quote-btn {
+  display: inline-block;
+  background-color: lightslategray;
+  border: 2px solid #b0a28f;
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+  font-family: "Zilla Slab", serif;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 5px #22333c;
+  box-sizing: border-box;
+}
+
+#random-quote-btn:hover {
+  background-color: #22333c;
+  color: white;
+  font-weight: normal;
+}
+
+#random-quote-btn:active {
+  background-color: #22333c;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+#random-quote-btn:focus {
+  outline: 0;
+} 
+
+@media only screen and (min-width: 768px) {
+  #random-quote-btn  {
+    font-size: 14px;
+  }
+}

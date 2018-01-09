@@ -1,0 +1,68 @@
+#apidoc {
+  flex-basis: 90%;
+  font-size: 18px;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;  
+  margin: 30px;
+}
+
+#apidoc h1, #apidoc h2, #apidoc h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.row {
+  display:flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.row p {
+  margin-top: 2px ;
+  margin-bottom: 2px ;
+}
+
+#apidoc a:link {
+  color: blue;
+}
+
+#apidoc a:visited {
+  color: rgb(113, 113, 218);
+}
+
+#apidoc a:hover {
+  color: grey;
+}
+
+#apidoc a:active {
+  color: grey;
+}
+
+#quote {
+  background-color: lightgrey;
+  margin-left: 20px;
+  width: 500px;
+  height: auto;
+}
+
+button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;  
+}
+
+pre{
+  white-space: pre-wrap;
+}
+
+.api-address {
+  text-decoration: none;
+  color: black;
+}

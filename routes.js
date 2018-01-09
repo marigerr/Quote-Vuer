@@ -62,10 +62,15 @@ router.route("/api.quotes/author-starts-with")
     });
   });
 
+router.route("/api.quotes/docs")
+  .get((req, res) => {
+    res.sendFile(__dirname + '/public/api-doc.html');
+  });
+
 // Root address of app will display index.html with api information
 router.route("/")
   .get((req, res) => {
-    res.sendFile(__dirname + '/views/index.html');
+    res.sendFile(__dirname + '/public/index.html');
   });
 
 module.exports = router;

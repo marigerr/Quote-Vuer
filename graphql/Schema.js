@@ -27,7 +27,7 @@ const quoteType = new GraphQLObjectType({
   })
 });
 
-const graphqlSchema = new GraphQLSchema({
+module.exports = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
@@ -90,5 +90,3 @@ const graphqlSchema = new GraphQLSchema({
     },
   })
 });
-
-module.exports = { graphqlSchema };

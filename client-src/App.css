@@ -1,0 +1,39 @@
+body, html, #page {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  background-color: black;
+}
+#app {
+  display:flex;
+  height: 100%;
+  width: 100%;
+  font-family: "Zilla Slab", serif;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#page {
+  display:flex;
+  flex-direction: column;  
+}
+
+#main {
+  flex-basis: 90%;
+  font-size: 18px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#links {
+  flex-basis: 10%;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  #links, #main {
+    font-size: 24px;
+  }
+}

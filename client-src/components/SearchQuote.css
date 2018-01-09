@@ -1,0 +1,80 @@
+#search-input-wrapper {
+  flex-basis: 5%;
+  text-align: center;
+}
+
+#search-results {
+  flex-basis: 90%
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+input {
+  background-color: black;
+  color: white;
+  border: none;
+  border-bottom: 2px solid #D3D3D3;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+input:focus, input:active {
+  border: none;
+  border-bottom: 2px solid #D3D3D3;
+  outline: none;
+}
+
+#search-results {
+  display: flex;
+  justify-content: space-around;
+}
+
+#search-result-authors button {
+  background:none!important;
+  color:inherit;
+  border:none; 
+  padding:0!important;
+  font: inherit;
+  /* border-bottom:1px solid #444;  */
+  cursor: pointer;
+}
+
+#search-result-authors  button{
+  text-align: left;
+  font-size: 12px;
+}
+
+#search-result-quotes {
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  #search-result-authors button, #search-result-authors li,
+  #search-result-quotes {
+    font-size: 24px;
+  }
+}
+
+#search-result-authors  {
+  flex-basis: 20%;
+}   
+
+#search-result-authors  ul{
+  margin: 0px;
+}   
+
+#search-result-quotes  {
+  flex-basis: 60%;
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#search-result-quotes li {
+  margin-bottom: 15px;
+}

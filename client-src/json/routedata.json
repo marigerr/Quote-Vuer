@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "Get random quote", "url": "/api.quotes/random", "method": "Get", "reqparams": "none", "returns": "one random quote", "format": "json", "example": "https://mighty-poet.glitch.me/api.quotes/random"},
+  { "id": 2, "name": "Get list of all authors", "url": "/api.quotes/authors", "method": "Get", "reqparams": "none", "returns": "list of all authors in database", "format": "json", "example": "https://mighty-poet.glitch.me/api.quotes/authors"},
+  { "id": 3, "name": "Get all quotes by given author parameter", "url": "/api.quotes/author", "method": "Get", "reqparams": "author - string", "returns": "list of quotes by given author", "format": "json", "example": "https://mighty-poet.glitch.me/api.quotes/author?author=Abraham Lincoln"},
+  { "id": 4, "name": "Get list of all authors that start with given parameter", "url": "/api.quotes/author-starts-with", "method": "Get", "reqparams": "startswith - string", "returns": "list of authors that start with parameter", "format": "json", "example": "https://mighty-poet.glitch.me/api.quotes/author-starts-with?startswith=a"}   
+]  
