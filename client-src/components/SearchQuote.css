@@ -1,17 +1,13 @@
-#search-input-wrapper {
-  flex-basis: 5%;
+ #search-input-wrapper {
   text-align: center;
 }
 
-#search-results {
-  flex-basis: 90%
-}
 
-input::placeholder {
+#search-input-wrapper input::placeholder {
   text-align: center;
 }
 
-input {
+#search-input-wrapper input {
   background-color: black;
   color: white;
   border: none;
@@ -37,7 +33,6 @@ input:focus, input:active {
   border:none; 
   padding:0!important;
   font: inherit;
-  /* border-bottom:1px solid #444;  */
   cursor: pointer;
 }
 
@@ -77,4 +72,4 @@ ul {
 
 #search-result-quotes li {
   margin-bottom: 15px;
-}
+} 

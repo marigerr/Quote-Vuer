@@ -4,11 +4,10 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  context: path.resolve(__dirname, './client-src/'),
-  entry: './main.js',
+  context: path.resolve(__dirname, './client-src'),
+  entry: { app:'./main.js'},
   output: {
     path: path.resolve(__dirname, './public'),
-    publicPath: '/public/',
     filename: 'build.js'
   },
   plugins: [
