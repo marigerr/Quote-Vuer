@@ -59,3 +59,21 @@ Example data:
       <p>Example : <a href="https://mighty-poet.glitch.me/api.quotes/author?author=Abraham Lincoln">https://mighty-poet.glitch.me/api.quotes/author?author=Abraham Lincoln</a></p>          
     </div>
   </div>  
+
+
+
+Development and Build
+
+Install packages
+Create .env file with Database and Port
+
+Dev
+
+Start server - npm run startdev
+Start client - npm run clientdev
+
+Build
+
+
+
+
