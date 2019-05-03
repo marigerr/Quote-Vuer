@@ -2,33 +2,16 @@
   font-size: 18px;
 }
 
-#apidoc h1, #apidoc h2, #apidoc h3 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
 .row p {
   margin-left: 10px;
   margin-top: 2px ;
   margin-bottom: 2px ;
 }
 
-#apidoc a:link {
+#apidoc a:link, #apidoc a:visited {
   color: lightslategray;
 }
 
-#apidoc a:visited {
-  color: lightslategray;
-}
-
-#apidoc a:hover {
+#apidoc a:hover, #apidoc a:active {
   color: #21709b;
-}
-
-#apidoc a:active {
-  color: #21709b;
-}
-
-pre{
-  white-space: pre-wrap;
 }

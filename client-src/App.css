@@ -8,7 +8,6 @@ body, html, #page {
   display:flex;
   height: 100%;
   width: 100%;
-  font-family: "Zilla Slab", serif;
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

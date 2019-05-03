@@ -29,14 +29,13 @@ a:hover {
 
 #random-quote-btn {
   display: inline-block;
-  background-color: lightslategray;
+  background-color: rgb(156, 159, 161);
   border: 2px solid #b0a28f;
   color: black;
   padding: 5px;
   text-decoration: none;
-  font-family: "Zilla Slab", serif;
   font-size: 12px;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin: 2px 2px;
   cursor: pointer;
   border-radius: 4px;

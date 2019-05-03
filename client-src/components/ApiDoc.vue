@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="apidoc">
-      <h1>Api documentation</h1>
+      <h2>Api documentation</h2>
       <h2>Base Url : https://mighty-poet.glitch.me</h2>
       <ul>
         <li
